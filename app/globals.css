@@ -1,0 +1,232 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+  background: #f8fafc;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  line-height: 1.4;
+}
+
+main {
+  padding: 2rem;
+}
+
+.table-container {
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table th {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #475569;
+}
+
+.table tr:nth-child(even) {
+  background: #f1f5f9;
+}
+
+.metric-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.metric-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 20px 25px -15px rgba(15, 23, 42, 0.2);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #cbd5f5;
+  color: #1d4ed8;
+}
+
+.status-pill.alert {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-pill.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.section-subtitle {
+  color: #64748b;
+  margin-block-end: 1.25rem;
+}
+
+.dashboard-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reminder-card {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 25px 45px -25px rgba(59, 130, 246, 0.6);
+}
+
+.reminder-card strong {
+  font-size: 1.125rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.booking-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-item span {
+  font-weight: 600;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.timeline-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 16px 30px -24px rgba(15, 23, 42, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-card h3 {
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+.timeline-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-card li {
+  display: flex;
+  justify-content: space-between;
+  color: #475569;
+}
+
+.timeline-card li span:last-child {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.empty-state {
+  color: #cbd5f5;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .reminder-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .booking-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
